@@ -1,0 +1,53 @@
+{
+  "rewrites": [
+    {
+      "source": "/map",
+      "destination": "/map.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "/api/file?path=:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/admin(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/p/:id",
+      "destination": "/map.html?p=:id",
+      "permanent": false
+    },
+    {
+      "source": "/t/:id",
+      "destination": "/map.html?t=:id",
+      "permanent": false
+    },
+    {
+      "source": "/k/:id",
+      "destination": "/map.html?k=:id",
+      "permanent": false
+    }
+  ]
+}

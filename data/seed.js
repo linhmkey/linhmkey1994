@@ -1,0 +1,154 @@
+/* Dữ liệu mẫu chỉ dùng khi mở file trực tiếp trên máy (không qua Vercel) */
+window.MAP_SEED = {
+  "version": 1,
+  "updatedAt": "2026-11-22T10:00:00.000Z",
+  "settings": {
+    "title": "Map Local Bình Thuận",
+    "subtitle": "Bản đồ du lịch địa phương do Thoai Mai House giới thiệu",
+    "center": {
+      "lat": 10.9678946,
+      "lng": 108.0377487,
+      "zoom": 11
+    }
+  },
+  "areas": [
+    {
+      "id": "binh-thuan",
+      "name": "Toàn Bình Thuận",
+      "lat": 10.9678946,
+      "lng": 108.0377487,
+      "zoom": 11,
+      "link": "https://www.google.com/maps/place/B%C3%ACnh+Thu%E1%BA%ADn/@10.9678946,108.0377487,11z",
+      "color": "#3a86c8"
+    },
+    {
+      "id": "trung-tam-phan-thiet",
+      "name": "Trung Tâm Phan Thiết",
+      "lat": 10.9281215,
+      "lng": 108.0983994,
+      "zoom": 15,
+      "link": "https://www.google.com/maps/place/Phan+Thi%E1%BA%BFt/@10.9285253,108.0933297,15z",
+      "color": "#f08a24"
+    }
+  ],
+  "categories": [
+    {
+      "id": "phong-o",
+      "name": "Phòng Ở",
+      "icon": "🏠",
+      "color": "#e05a6d",
+      "note": "Homestay, khách sạn, căn hộ"
+    },
+    {
+      "id": "quan-an",
+      "name": "Quán Ăn",
+      "icon": "🍜",
+      "color": "#f4a261",
+      "note": ""
+    },
+    {
+      "id": "quan-bar",
+      "name": "Quán Bar",
+      "icon": "🍸",
+      "color": "#8e6bbf",
+      "note": ""
+    },
+    {
+      "id": "bai-do-xe",
+      "name": "Bãi Đỗ Xe",
+      "icon": "🅿️",
+      "color": "#457b9d",
+      "note": ""
+    },
+    {
+      "id": "diem-tham-quan",
+      "name": "Điểm Tham Quan",
+      "icon": "📸",
+      "color": "#2a9d8f",
+      "note": ""
+    },
+    {
+      "id": "quan-cafe",
+      "name": "Quán Cafe",
+      "icon": "☕",
+      "color": "#a0703f",
+      "note": ""
+    },
+    {
+      "id": "nha-hang",
+      "name": "Nhà Hàng",
+      "icon": "🍽️",
+      "color": "#d4a017",
+      "note": ""
+    }
+  ],
+  "places": [
+    {
+      "id": "thoai-mai-house-view-bien",
+      "name": "Thoai Mai House | Hẻm 40 Lê Lợi (View Biển)",
+      "categoryId": "phong-o",
+      "lat": 10.919147326788922,
+      "lng": 108.10922303234705,
+      "cover": "/assets/stay-sea.jpg",
+      "photos": [
+        "/assets/stay-sea.jpg",
+        "/assets/stay-house.jpg"
+      ],
+      "note": "Sát biển đồi dương",
+      "phone": "0943919441",
+      "address": "",
+      "mapLink": "https://maps.app.goo.gl/XarQFYwdthJ1AoD79"
+    },
+    {
+      "id": "thoai-mai-house",
+      "name": "Thoai Mai House",
+      "categoryId": "phong-o",
+      "lat": 10.9218568,
+      "lng": 108.1107783,
+      "cover": "/assets/stay-house.jpg",
+      "photos": [
+        "/assets/stay-house.jpg",
+        "/assets/place-home.jpg"
+      ],
+      "note": "Homestay sân vườn, gần biển Đồi Dương",
+      "phone": "0943919441",
+      "address": "",
+      "mapLink": "https://maps.app.goo.gl/8qpAkwWy48XY8FFG8"
+    },
+    {
+      "id": "tiem-ca-phe-duong-chan-troi",
+      "name": "Tiệm Cà Phê Đường Chân Trời",
+      "categoryId": "quan-cafe",
+      "lat": 10.9195558,
+      "lng": 108.1095249,
+      "cover": "/assets/place-coffee.jpg",
+      "photos": [],
+      "note": "",
+      "phone": "",
+      "address": "",
+      "mapLink": "https://maps.app.goo.gl/zKN1n9P2eEZxecHb9"
+    }
+  ],
+  "tours": [
+    {
+      "id": "mot-buoi-o-doi-duong",
+      "name": "Một buổi ở Đồi Dương",
+      "note": "Lịch trình mẫu: nhận phòng, đi bộ ra biển, cà phê ngắm hoàng hôn.",
+      "mode": "driving",
+      "stops": [
+        {
+          "placeId": "thoai-mai-house",
+          "note": "Nhận phòng, gửi xe"
+        },
+        {
+          "placeId": "thoai-mai-house-view-bien",
+          "note": "Ngắm biển"
+        },
+        {
+          "placeId": "tiem-ca-phe-duong-chan-troi",
+          "note": "Cà phê buổi chiều"
+        }
+      ]
+    }
+  ]
+};

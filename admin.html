@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#4a2c1d">
+  <title>Quản trị Map Local</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Mulish:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="admin.css?v=1">
+</head>
+<body>
+  <!-- Đăng nhập -->
+  <section class="login" id="login" hidden>
+    <form class="login-card" id="login-form">
+      <span class="kicker">Map Local</span>
+      <h1>Quản trị bản đồ</h1>
+      <p class="muted">Đăng nhập để thêm, sửa địa điểm và lịch trình.</p>
+      <label class="field"><span>Email</span><input type="email" id="em" autocomplete="username" required></label>
+      <label class="field"><span>Mật khẩu</span><input type="password" id="pw" autocomplete="current-password" required></label>
+      <label class="check"><input type="checkbox" id="remember" checked> Ghi nhớ trên thiết bị này</label>
+      <button class="btn primary block" type="submit">Đăng nhập</button>
+      <p class="err" id="login-err" role="alert"></p>
+      <a class="link" href="map.html">← Xem bản đồ công khai</a>
+    </form>
+  </section>
+
+  <!-- Ứng dụng -->
+  <div class="app" id="app" hidden>
+    <header class="top">
+      <div class="brand"><span class="kicker">Map Local</span><strong>Quản trị</strong></div>
+      <span class="status" id="status"></span>
+      <a class="btn ghost" href="map.html" target="_blank" rel="noopener">Xem bản đồ ↗</a>
+      <button class="btn ghost" type="button" id="account">👤 Tài khoản</button>
+      <button class="btn ghost" type="button" id="logout">Đăng xuất</button>
+    </header>
+    <nav class="tabs" id="tabs">
+      <button type="button" data-tab="places" class="on">📍 Địa điểm</button>
+      <button type="button" data-tab="categories">🏷️ Danh mục</button>
+      <button type="button" data-tab="tours">🧭 Lịch trình</button>
+      <button type="button" data-tab="areas">🗺️ Khu vực</button>
+    </nav>
+    <main class="main" id="main"></main>
+  </div>
+
+  <!-- Hộp soạn thảo -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <header class="modal-head"><h2 id="modal-title"></h2><button class="x" type="button" id="modal-x" aria-label="Đóng">✕</button></header>
+      <div class="modal-body" id="modal-body"></div>
+      <footer class="modal-foot" id="modal-foot"></footer>
+    </div>
+  </div>
+
+  <div class="confirm" id="confirm" hidden>
+    <div class="confirm-card"><p id="confirm-text"></p><div class="row-end"><button class="btn ghost" type="button" id="confirm-no">Huỷ</button><button class="btn danger" type="button" id="confirm-yes">Xoá</button></div></div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="admin.js?v=1"></script>
+</body>
+</html>

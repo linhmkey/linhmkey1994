@@ -1,0 +1,10 @@
+{
+  "name": "thoai-mai-house-map",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Danh thiếp Hoàng Linh + Map Local Bình Thuận",
+  "scripts": {
+    "dev": "LOCAL_STORE=1 node dev-server.js"
+  },
+  "engines": { "node": ">=18" }
+}
